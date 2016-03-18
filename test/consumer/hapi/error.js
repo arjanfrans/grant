@@ -10,7 +10,7 @@ var Grant = require('../../../').hapi()
 describe('error - hapi', function () {
   function url (path) {
     var c = config.server
-    return c.protocol + '://' + c.host + path
+    return c.protocol + '://' + c.host + (c.path || '') + path
   }
 
   var config = {

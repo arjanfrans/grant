@@ -11,7 +11,7 @@ var Grant = require('../../').express()
 describe('oauth1', function () {
   function url (path) {
     var c = config.server
-    return c.protocol + '://' + c.host + path
+    return c.protocol + '://' + c.host + (c.path || '') + path
   }
 
   var grant, app, server
